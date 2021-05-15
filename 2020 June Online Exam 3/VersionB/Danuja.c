@@ -1,34 +1,36 @@
    #include <stdio.h>
-   #define size 10
+   #define SIZE 10
 
     int main(void)
     {
  
-        int numArr[10],num;
+        int numArr[SIZE],positiveNum[SIZE],negativeNum[SIZE];
 
 
         printf("Input elements of the array\n ");
 
-        for(int i = 1 ;i<=size;i++){
+        for(int i = 1 ;i<=SIZE;i++){
           scanf("%d",&numArr[i]);
         }
 
         printf("Number Series : ");
-        for(int i = 1;i <= size ; i++){
+        for(int i = 1;i <= SIZE ; i++){
         printf("%d\t",numArr[i]);
         }
 
         printf("\nPositive Numbers : ");
-        for(int i = 1;i <= size ; i++){
+        for(int i = 1;i <= SIZE ; i++){
           if(numArr[i] >= 0){
-          printf("%d\t",numArr[i]);
+          positiveNum[i] = numArr[i];
+          printf("%d\t",positiveNum[i]);
          }
         }
 
         printf("\nNegative numbers : ");
-        for(int i = 1;i <= size ; i++){
+        for(int i = 1;i <= SIZE ; i++){
           if(numArr[i] < 0){
-          printf("%d\t",numArr[i]);
+          negativeNum[i] = numArr[i];
+          printf("%d\t",negativeNum[i]);
          }
         }
     }
